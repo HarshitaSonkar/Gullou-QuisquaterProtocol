@@ -12,3 +12,9 @@ End-to-End Authentication Delay is defined as the duration of time starting from
 authentication process to the instant when the user gets the authentication Success/Failure message from
 the verifier.
 
+
+g++ verifier.cpp -l:libcryptopp.a -std=c++11 -o verifier
+g++ claimant.cpp  -l:libcryptopp.a -std=c++11 -o claimant
+./verifier
+./claimant 127.0.0.1 5001
+
